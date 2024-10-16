@@ -1,10 +1,13 @@
 import React from 'react';
-
+import { useRouter } from 'next/router';
+useEffect(() => {
+    console.log('Current path:', router.pathname);
+}, [router.pathname]);
 const page = () => {
     return (
         <>
             <h1>About</h1>
-            <h2> This is about Page</h2>
+            <h1>Current Path: {router.pathname}</h1>
         </>
     );
 };
